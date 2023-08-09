@@ -25,15 +25,15 @@ public class ImageDecoding {
 		ArrayList<String> arr = new ArrayList<String>();					// empty array list for file input
 		BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/seanfite/eclipse-workspace/CS_351/src/Assignment_1/image.dat"));
 		String num = bufferedReader.readLine();								// read first line
-        String [] parts = num.split(" ");									// parse string into width and height
-        int[] nums = new int[2];	
-        nums[0] = Integer.parseInt(parts[0]);
-        nums[1] = Integer.parseInt(parts[1]);
-        int width = nums[0];
-        int height = nums[1];
+	        String [] parts = num.split(" ");									// parse string into width and height
+	        int[] nums = new int[2];	
+	        nums[0] = Integer.parseInt(parts[0]);
+	        nums[1] = Integer.parseInt(parts[1]);
+	        int width = nums[0];
+	        int height = nums[1];
 		String outputFile = "/Users/seanfite/eclipse-workspace/CS_351/src/Assignment_1/output.png";
-        BufferedImage canvas = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);  
-        Scanner scanner = new Scanner(bufferedReader);						// scan bufferedImage input reader
+	        BufferedImage canvas = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);  
+	        Scanner scanner = new Scanner(bufferedReader);						// scan bufferedImage input reader
 		while(scanner.hasNext())
 		{
 			arr.add(scanner.next());										// add input to arrayList
@@ -57,7 +57,7 @@ public class ImageDecoding {
 				y++;
 			}
 		}
-        ImageIO.write(canvas, "png", new File(outputFile));					// write to output file
+        	ImageIO.write(canvas, "png", new File(outputFile));					// write to output file
 	}
 }
 
